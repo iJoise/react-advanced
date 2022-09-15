@@ -1,13 +1,22 @@
-import './index.scss'
-import classes from './app.module.scss'
+import React, { Suspense } from 'react';
+import {Link, Route, Routes} from 'react-router-dom';
+import './index.scss';
+import { MainPageAsync } from '../pages/MainPage/MainPage.async';
+import { AboutPageAsync } from '../pages/AboutPage/AboutPage.async';
 
-export const App = () => {
+const App = () => {
+  return (
+    <div className="app">
+      <Link to={'/'}>Главная</Link>
+      <Link to={'/about'}>О сайте</Link>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path={'/about'} element={<AboutPageAsync/>}/>
+          <Route path={'/'} element={<MainPageAsync/>}/>
+        </Routes>
+      </Suspense>
+    </div>
+  );
+};
 
-	return (
-		<div className='app'>
-			<div>Hello REACT</div>
-			<button className={classes.button}>click</button>
-		</div>
-	)
-}
-
+export default App;
