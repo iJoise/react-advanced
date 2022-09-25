@@ -6,17 +6,16 @@ import { AppRouter } from 'app/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 
-
 const App = () => {
 	const { theme } = useTheme();
 
 	return (
 		<div className={classNames('app', {}, [theme])}>
 			<Suspense fallback="">
-				<Navbar/>
+				<Navbar />
 				<div className="content-page">
-					<Sidebar/>
-					<AppRouter/>
+					<Sidebar />
+					<AppRouter />
 				</div>
 			</Suspense>
 		</div>
