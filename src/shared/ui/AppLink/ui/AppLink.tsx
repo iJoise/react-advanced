@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Link, LinkProps } from 'react-router-dom';
 import { AppLinkTheme } from 'shared/enums';
 import cls from './AppLink.module.scss';
