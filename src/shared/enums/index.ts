@@ -3,6 +3,6 @@ export enum AppLinkTheme {
 	SECONDARY = 'secondary',
 }
 
-export enum ThemeButton {
+export enum ButtonTheme {
 	CLEAR = 'clear'
 }
