@@ -52,6 +52,7 @@ module.exports = {
 		'@typescript-eslint/ban-ts-comment': 'off',
 		'no-unused-vars': 'off',
 		'@typescript-eslint/no-unused-vars': ['warn'],
+		'@typescript-eslint/no-var-requires': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
