@@ -5,14 +5,15 @@ import { Button } from 'shared/ui/Button';
 import { ButtonTheme } from 'shared/enums';
 
 interface LangSwitcherProps {
-    className?: string;
+	className?: string;
+	short?: boolean;
 }
 
-export const LangSwitcher = ({ className }: LangSwitcherProps) => {
+export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
 	const { t, i18n } = useTranslation();
 
 	const toggle = async () => {
-		await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+		i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
 	};
 
 	return (
@@ -21,7 +22,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
 			theme={ButtonTheme.CLEAR}
 			onClick={toggle}
 		>
-			{t('Язык')}
+			{t(short ? 'Короткий язык' : 'Язык')}
 		</Button>
 	);
 };
