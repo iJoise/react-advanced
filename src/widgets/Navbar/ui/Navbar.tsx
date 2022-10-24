@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Modal } from 'shared/ui/Modal/Modal';
 import { Button } from 'shared/ui/Button';
 import { ButtonTheme } from 'shared/enums';
+import { LoginModal } from 'features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -27,9 +27,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 			>
 				{t('Войти')}
 			</Button>
-			<Modal isOpen={isAuthModal} onClose={onToggleModal}>
-				{t('Войти')}
-			</Modal>
+			<LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
 		</div>
 	);
 };

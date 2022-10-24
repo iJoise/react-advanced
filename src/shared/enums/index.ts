@@ -16,3 +16,8 @@ export enum ButtonSize {
 	L = 'size_l',
 	XL = 'size_xl',
 }
+
+export enum TextTheme {
+	PRIMARY = 'primary',
+	ERROR = 'error',
+}
