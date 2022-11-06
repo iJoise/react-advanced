@@ -49,7 +49,7 @@ module.exports = {
 				ignoreAttribute: ['data-testid', 'to'],
 			},
 		],
-		'max-len': ['error', 100, { ignoreComments: true }],
+		'max-len': ['error', 110, { ignoreComments: true }],
 		'no-unused-vars': 'off',
 		'jsx-a11y/no-static-element-interactions': 'off',
 		'jsx-a11y/click-events-have-key-events': 'off',
