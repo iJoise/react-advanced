@@ -31,9 +31,7 @@ export const Modal = (props: ModalProps) => {
 	const { theme } = useTheme();
 
 	useEffect(() => {
-		if (isOpen) {
-			setIsMounted(true);
-		}
+		setIsMounted(isOpen);
 	}, [isOpen]);
 
 	const closeHandler = useCallback(() => {

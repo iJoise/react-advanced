@@ -17,7 +17,7 @@ export const loginByUsername = createAsyncThunk<User,
 				const response = await axios.post<User>('http://localhost:8000/login', authData);
 
 				if (!response.data) {
-					throw new Error();
+					throw new Error('error');
 				}
 
 				localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
@@ -25,6 +25,7 @@ export const loginByUsername = createAsyncThunk<User,
 
 				return response.data;
 			} catch (e) {
+				// eslint-disable-next-line no-console
 				console.log(e);
 				return thunkAPI.rejectWithValue('error');
 			}
