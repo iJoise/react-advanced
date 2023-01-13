@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button';
+import { ButtonTheme } from 'shared/enums';
 
 // Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
@@ -18,6 +19,7 @@ export const BugButton = () => {
 	return (
 		<Button
 			onClick={onThrow}
+			theme={ButtonTheme.OUTLINE}
 		>
 			{t('throw error')}
 		</Button>

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button';
@@ -17,10 +17,6 @@ export const Navbar = ({ className }: NavbarProps) => {
 	const { t } = useTranslation();
 	const authData = useSelector(getUserAuthData);
 	const dispatch = useDispatch();
-
-	useEffect(() => {
-		if (authData) setIsAuthModal(false);
-	}, [authData]);
 
 	const onCloseModal = useCallback(() => {
 		setIsAuthModal(false);

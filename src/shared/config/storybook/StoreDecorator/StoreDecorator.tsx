@@ -1,11 +1,12 @@
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { DeepPartial } from '@reduxjs/toolkit';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { profileReducer } from 'entities/Profile';
 
 const defaultAsyncReducers: ReducersList = {
 	loginForm: loginReducer,
+	profile: profileReducer,
 };
 
 export const StoreDecorator = (
