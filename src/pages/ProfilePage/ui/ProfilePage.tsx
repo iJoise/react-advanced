@@ -8,7 +8,6 @@ import {
 	getProfileError, getProfileForm,
 	getProfileIsLoading,
 	getProfileReadonly,
-	getProfileValidateErrors,
 	profileActions,
 	ProfileCard,
 	profileReducer,
@@ -34,7 +33,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 	const isLoading = useSelector(getProfileIsLoading);
 	const error = useSelector(getProfileError);
 	const readonly = useSelector(getProfileReadonly);
-	const validateErrors = useSelector(getProfileValidateErrors);
 
 	useEffect(() => {
 		dispatch(fetchProfileData());

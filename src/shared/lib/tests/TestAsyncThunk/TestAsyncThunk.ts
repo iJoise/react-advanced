@@ -10,6 +10,7 @@ jest.mock('axios');
 const mockedAxios = jest.mocked(axios, true);
 
 export class TestAsyncThunk<Return, Arg, RejectedValue> {
+	// eslint-disable-next-line
 	dispatch: jest.MockedFn<any>;
 
 	getState: () => StateSchema;
@@ -17,7 +18,7 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
 	actionCreator: ActionCreatorType<Return, Arg, RejectedValue>;
 
 	api: jest.MockedFunctionDeep<AxiosStatic>;
-
+	// eslint-disable-next-line
 	navigate: jest.MockedFn<any>;
 
 	constructor(actionCreator: ActionCreatorType<Return, Arg, RejectedValue>) {
